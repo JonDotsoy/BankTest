@@ -77,6 +77,7 @@ public class main {
                 "Los yoshies con manzanas",
                 new ArrayList<Cuenta>());
 
+        System.out.println("Inicia la configuracion...");
         //creacion de cunetas 
         CuentaCorriente cc01 = new CuentaCorriente("001", "729"); //tipo de objeto, nombre variable 
         CuentaCorriente cc001 = new CuentaCorriente("002", "729");
@@ -112,9 +113,12 @@ public class main {
         ((CuentaAhorro) cli[1].getListaCuentas().get(2)).Giro(1);
         ((CuentaAhorro) cli[1].getListaCuentas().get(2)).Giro(1);
 
+        System.out.println("Configuracion terminada...[OK]");
         // Lista de movimientos
-        InformeMovimientos.listarMovimientos();
+        //InformeMovimientos.listarMovimientos();
 
+        
+        
         System.out.println("END");
     }
 
