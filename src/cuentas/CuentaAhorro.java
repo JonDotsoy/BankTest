@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import movimientos.Movimiento;
 
+
 /**
- *
- * @author Admin
+ * @author Carolina Berrios
  */
 public class CuentaAhorro extends Cuenta {
 

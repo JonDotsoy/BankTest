@@ -13,8 +13,7 @@ import java.util.ArrayList;
 import movimientos.Movimiento;
 
 /**
- *
- * @author Admin
+ * @author Carolina Berrios
  */
 public class InformeMovimientos {
 

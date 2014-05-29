@@ -10,8 +10,7 @@ import java.util.Date;
 import movimientos.Movimiento;
 
 /**
- *
- * @author Admin
+ * @author Carolina Berrios
  */
 public class LineaCredito {
 

@@ -8,8 +8,7 @@ package cuentas;
 import java.util.Date;
 
 /**
- *
- * @author Admin
+ * @author Carolina Berrios
  */
 public class Cuenta {
 

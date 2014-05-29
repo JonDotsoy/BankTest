@@ -1,4 +1,5 @@
 
+
 import clientes.Cliente;
 import cuentas.Cuenta;
 import cuentas.CuentaAhorro;
@@ -12,8 +13,7 @@ import java.util.ArrayList;
  * and open the template in the editor.
  */
 /**
- *
- * @author Admin
+ * @author Carolina Berrios
  */
 public class main {
 
