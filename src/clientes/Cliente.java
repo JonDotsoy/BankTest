@@ -10,7 +10,7 @@ import cuentas.Cuenta;
 import java.util.ArrayList;
 
 /**
- * @author Carolina Berrios
+ * @author Carolina Barría
  */
 public class Cliente {
   private String codigo;

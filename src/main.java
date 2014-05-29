@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * and open the template in the editor.
  */
 /**
- * @author Carolina Berrios
+ * @author Carolina Barría
  */
 public class main {
 

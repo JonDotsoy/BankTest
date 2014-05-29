@@ -11,7 +11,7 @@ import movimientos.Movimiento;
 
 
 /**
- * @author Carolina Berrios
+ * @author Carolina Barría
  */
 public class CuentaAhorro extends Cuenta {
 

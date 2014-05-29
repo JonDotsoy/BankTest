@@ -7,7 +7,7 @@ package movimientos;
 //almacena los moviemientos para luego mandarlos a informe
 
 /**
- * @author Carolina Berrios
+ * @author Carolina Barría
  */
 public class Movimiento {
 
