@@ -5,10 +5,6 @@
  */
 package informes;
 
-import clientes.Cliente;
-import cuentas.Cuenta;
-import cuentas.CuentaAhorro;
-import cuentas.CuentaCorriente;
 import java.util.ArrayList;
 import movimientos.Movimiento;
 
