@@ -5,6 +5,7 @@ import cuentas.CuentaAhorro;
 import cuentas.CuentaCorriente;
 import informes.InformeMovimientos;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -117,9 +118,73 @@ public class main {
         // Lista de movimientos
         //InformeMovimientos.listarMovimientos();
 
-        
-        
-        System.out.println("END");
+        //// Inicia interfas de usuario
+        /// Es while:true para que se ejecute eternamente.
+        /*
+         * fuente : http://puntocomnoesunlenguaje.blogspot.com/2012/08/java-scanner.html
+         */
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.println("\n\n== Menu ==\n");
+            System.out.println("\t1) Selecciona cliente");
+            System.out.println("\t2) Listar clientes");
+            System.out.println("\t3) Informe movimientos");
+            System.out.println("\n\t0) Salir de la aplicacion\n");
+            System.out.print("Indique modulo:");
+            int index = sc.nextInt();// recibo indicacion del usuario
+            /*
+             * Si el usuario indica 0 sale de la aplicacion
+             */
+            if (index == 0) {
+                System.out.println("Gracias por preferirnos.");
+                System.exit(0);
+            }
+            /*
+             * Seleccionar clientes 
+             */
+            if (index == 1) {
+                System.out.print("Seleccione N° cliente:");
+                int nclinte = sc.nextInt();
+                System.out.print("Seleccione N° cuenta:");
+                int ncuenta = sc.nextInt();
+                while (true) {
+                    System.out.println("-- Menu : Seleccionar clientes --");
+                    System.out.println("\t1) Girar.");
+                    System.out.println("\t2) Consultar Saldo.");
+                    System.out.println("\t3) Info movimientos.");
+                    System.out.println("\t4) Depositar.");
+                    System.out.println("\t0) Salir.");
+                    System.out.print("Ingre opcion:");
+                    int selecUser = sc.nextInt();
+                    if (selecUser == 0) {
+                        break;
+                    }
+                    if (selecUser == 1) {
+                        
+                    }
+                }
+            }
+            /*
+             * Listado de cliente 
+             */
+            if (index == 2) {
+                System.out.println("");
+                for (int i = 0; i < cli.length; i++) {
+                    System.out.println("\t"+i+". "+cli[i].getApaterno()+" "+cli[i].getNombres());
+                    for (int j = 0; j < cli[i].getListaCuentas().size(); j++) {
+                        System.out.print("\t\t"+j+". "+cli[i].getListaCuentas().get(j).getNumeroCuenta());
+                        if (cli[i].getListaCuentas().get(j) instanceof CuentaCorriente) {
+                            System.out.println(" - Cuenta Corriente.");
+                        }
+                        if (cli[i].getListaCuentas().get(j) instanceof CuentaAhorro) {
+                            System.out.println(" - Cuenta de Ahorro.");
+                        }
+                    }
+                }
+            }
+        }
+        //// Finaliza interfas de usuario
+
     }
 
 }
