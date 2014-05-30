@@ -179,10 +179,6 @@ public class main {
                             ((CuentaAhorro) cuenta).consultarSaldo();
                         }
                         if (cuenta instanceof CuentaCorriente) {
-//<<<<<<< HEAD
-                            System.out.print("Tu saldo actual es : ----------"); //agregar
-                            /// Sin metodos relacionados
-//=======
                             ((CuentaCorriente) cuenta).consultarSaldo();
                         }
                     }
@@ -212,7 +208,6 @@ public class main {
                             System.out.print("Ingrese monto : ");
                             double monto = sc.nextDouble();
                             ((CuentaAhorro) cuenta).deposito(monto);
-//>>>>>>> FETCH_HEAD
                         }
                     }
                 }
@@ -236,14 +231,9 @@ public class main {
                 }
             }
 
-/*<<<<<<< HEAD
-            
-            
-=======
             /*
              * Informe de movimientos 
              */
-//>>>>>>> FETCH_HEAD
             if (index == 3) {
                 System.out.println("--- Todos los movimientos ---");
                 ArrayList<Movimiento> lmts = informes.InformeMovimientos.getGuardamovimientos();
@@ -252,10 +242,6 @@ public class main {
                 }
                 System.out.println("-----------------------------");
             }
-/*<<<<<<< HEAD
-
-=======
->>>>>>> FETCH_HEAD*/
         }
         //// Finaliza interfas de usuario
 
