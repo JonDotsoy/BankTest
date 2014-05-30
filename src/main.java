@@ -6,6 +6,7 @@ import cuentas.CuentaCorriente;
 import informes.InformeMovimientos;
 import java.util.ArrayList;
 import java.util.Scanner;
+import movimientos.Movimiento;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -129,7 +130,7 @@ public class main {
             System.out.println("\t1) Selecciona cliente");
             System.out.println("\t2) Listar clientes");
             System.out.println("\t3) Informe movimientos");
-            System.out.println("\n\t0) Salir de la aplicacion\n");
+            System.out.println("\t0) Salir de la aplicacion\n");
             System.out.print("Indique modulo:");
             int index = sc.nextInt();// recibo indicacion del usuario
             /*
@@ -181,6 +182,21 @@ public class main {
                         }
                     }
                 }
+                System.out.print("Continuar [Y]:");
+                sc.next();// Para que el usuario precione enter antes de continuar
+            }
+            /*
+             * Informe de movimientos 
+             */
+            if (index == 3) {
+                System.out.println("--- Todos los movimientos ---");
+                ArrayList<Movimiento> lmts = informes.InformeMovimientos.getGuardamovimientos();
+                for (Movimiento mvt : lmts) {
+                    System.out.println(" [" + mvt.getNumeroMovimiento() + "]: monto=" + mvt.getMonto() + ", tipoMovimiento=" + mvt.getTipoMovimiento() + ", fechaMovimiento=" + mvt.getFechaMovimiento() + ", comision=" + mvt.getComision());
+                }
+                System.out.println("-----------------------------");
+                System.out.print("Continuar [Y]:");
+                sc.next();// Para que el usuario precione enter antes de continuar
             }
         }
         //// Finaliza interfas de usuario
