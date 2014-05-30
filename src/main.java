@@ -150,7 +150,7 @@ public class main {
                 while (true) {
                     System.out.println("-- Menu : Seleccionar clientes --");
                     System.out.println("\t1) Girar.");
-                    System.out.println("\t2) Consultar Saldo (disculpe las molestias, estamos trabajando para usted).");
+                    System.out.println("\t2) Consultar Saldo (solo cuentas de ahorro).");
                     System.out.println("\t3) Info movimientos.");
                     System.out.println("\t4) Depositar.");
                     System.out.println("\t0) Salir.");
