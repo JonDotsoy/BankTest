@@ -204,7 +204,7 @@ public class main {
                             double monto = sc.nextDouble();
                             ((CuentaCorriente) cuenta).depositoCredito(monto);
                         }
-                        if (cuenta instanceof CuentaCorriente) {
+                        if (cuenta instanceof CuentaAhorro) {
                             System.out.print("Ingrese monto : ");
                             double monto = sc.nextDouble();
                             ((CuentaAhorro) cuenta).deposito(monto);

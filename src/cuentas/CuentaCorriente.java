@@ -21,7 +21,7 @@ public class CuentaCorriente extends Cuenta {
         
         this.listaMovimientos = new ArrayList<>();
         super.setNumeroCuenta(Numerodecuenta);
-        this.setLaLineadeCredito(new LineaCredito(getNumeroCuenta() + Rut));
+        this.laLineadeCredito = new LineaCredito(getNumeroCuenta() + Rut);
 
     }
 
