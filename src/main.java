@@ -182,6 +182,7 @@ public class main {
                     }
                 }
             }
+            System.out.println("re cuek");
         }
         //// Finaliza interfas de usuario
 
