@@ -182,7 +182,7 @@ public class main {
                             ((CuentaAhorro) cuenta).consultarSaldo();
                         }
                         if (cuenta instanceof CuentaCorriente) {
-                            System.out.print("Tu saldo actual es : ???");
+                            System.out.print("Tu saldo actual es : ???"); //agregar
                             /// Sin metodos relacionados
                         }
                     }
@@ -206,12 +206,9 @@ public class main {
                     }
                 }
             }
-//<<<<<<< HEAD
+
             
-//=======
-            /*
-             * Informe de movimientos 
-             */
+            
             if (index == 3) {
                 System.out.println("--- Todos los movimientos ---");
                 ArrayList<Movimiento> lmts = informes.InformeMovimientos.getGuardamovimientos();
@@ -220,7 +217,7 @@ public class main {
                 }
                 System.out.println("-----------------------------");
             }
-//>>>>>>> FETCH_HEAD
+
         }
         //// Finaliza interfas de usuario
 
