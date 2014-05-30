@@ -31,7 +31,7 @@ public class CuentaCorriente extends Cuenta {
     }
 
     public ArrayList<Movimiento> getListaMovimientos() {
-        return listaMovimientos;
+        return laLineadeCredito.getListaMovimientos();
     }
 
     //Seteadores-------------------------------------------------------------
@@ -48,6 +48,9 @@ public class CuentaCorriente extends Cuenta {
 
         laLineadeCredito.Giro(cantidad);
 
+    }
+    public void depositoCredito(double cantidad){
+        laLineadeCredito.deposito(cantidad);
     }
 
 }

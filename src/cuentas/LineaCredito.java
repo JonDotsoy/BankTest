@@ -85,4 +85,16 @@ public class LineaCredito {
         };
 
     }
+
+    void deposito(double cantidad) {
+        saldo = saldo + cantidad;
+        
+        Movimiento movimiento = new Movimiento((float) cantidad, 2, new Date().toString(), 0);
+
+        listaMovimientos.add(movimiento);
+    }
+    
+    public void consultarSaldo(){
+        System.out.println("Tu saldo es: " + this.saldo);
+    }
 }
