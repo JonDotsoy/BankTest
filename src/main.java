@@ -182,8 +182,6 @@ public class main {
                         }
                     }
                 }
-                System.out.print("Continuar [Y]:");
-                sc.next();// Para que el usuario precione enter antes de continuar
             }
             /*
              * Informe de movimientos 
@@ -195,8 +193,6 @@ public class main {
                     System.out.println(" [" + mvt.getNumeroMovimiento() + "]: monto=" + mvt.getMonto() + ", tipoMovimiento=" + mvt.getTipoMovimiento() + ", fechaMovimiento=" + mvt.getFechaMovimiento() + ", comision=" + mvt.getComision());
                 }
                 System.out.println("-----------------------------");
-                System.out.print("Continuar [Y]:");
-                sc.next();// Para que el usuario precione enter antes de continuar
             }
         }
         //// Finaliza interfas de usuario
