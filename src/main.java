@@ -6,6 +6,7 @@ import cuentas.CuentaCorriente;
 import informes.InformeMovimientos;
 import java.util.ArrayList;
 import java.util.Scanner;
+import movimientos.Movimiento;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -129,7 +130,7 @@ public class main {
             System.out.println("\t1) Selecciona cliente");
             System.out.println("\t2) Listar clientes");
             System.out.println("\t3) Informe movimientos");
-            System.out.println("\n\t0) Salir de la aplicacion\n");
+            System.out.println("\t0) Salir de la aplicacion\n");
             System.out.print("Indique modulo:");
             int index = sc.nextInt();// recibo indicacion del usuario
             /*
@@ -147,6 +148,8 @@ public class main {
                 int nclinte = sc.nextInt();
                 System.out.print("Seleccione N° cuenta:");
                 int ncuenta = sc.nextInt();
+                // capturamos la cuenta del usuario
+                Cuenta cuenta = cli[nclinte].getListaCuentas().get(ncuenta);                        
                 while (true) {
                     System.out.println("-- Menu : Seleccionar clientes --");
                     System.out.println("\t1) Girar.");
@@ -156,11 +159,32 @@ public class main {
                     System.out.println("\t0) Salir.");
                     System.out.print("Ingre opcion:");
                     int selecUser = sc.nextInt();
+                    // Salir de este menu
                     if (selecUser == 0) {
                         break;
                     }
+                    // Girar dinero
                     if (selecUser == 1) {
-                        
+                        if (cuenta instanceof CuentaAhorro) {
+                            System.out.print("Indique la cantidad a girar : ");
+                            double cantidad = sc.nextDouble();
+                            ((CuentaAhorro) cuenta).Giro(ncuenta);
+                        }
+                        if (cuenta instanceof CuentaCorriente) {
+                            System.out.print("Indique la cantidad a girar : ");
+                            double cantidad = sc.nextDouble();
+                            ((CuentaCorriente) cuenta).GiroCredito(ncuenta);
+                        }
+                    }
+                    //Consultar Saldo
+                    if (selecUser == 2) {
+                        if (cuenta instanceof CuentaAhorro) {
+                            ((CuentaAhorro) cuenta).consultarSaldo();
+                        }
+                        if (cuenta instanceof CuentaCorriente) {
+                            System.out.print("Tu saldo actual es : ???");
+                            /// Sin metodos relacionados
+                        }
                     }
                 }
             }
@@ -182,7 +206,21 @@ public class main {
                     }
                 }
             }
+<<<<<<< HEAD
             System.out.println("re cuek");
+=======
+            /*
+             * Informe de movimientos 
+             */
+            if (index == 3) {
+                System.out.println("--- Todos los movimientos ---");
+                ArrayList<Movimiento> lmts = informes.InformeMovimientos.getGuardamovimientos();
+                for (Movimiento mvt : lmts) {
+                    System.out.println(" [" + mvt.getNumeroMovimiento() + "]: monto=" + mvt.getMonto() + ", tipoMovimiento=" + mvt.getTipoMovimiento() + ", fechaMovimiento=" + mvt.getFechaMovimiento() + ", comision=" + mvt.getComision());
+                }
+                System.out.println("-----------------------------");
+            }
+>>>>>>> FETCH_HEAD
         }
         //// Finaliza interfas de usuario
 

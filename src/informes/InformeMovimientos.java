@@ -29,4 +29,12 @@ public class InformeMovimientos {
         }
     }
 
+    public static ArrayList<Movimiento> getGuardamovimientos() {
+        return guardamovimientos;
+    }
+
+    public static void setGuardamovimientos(ArrayList<Movimiento> guardamovimientos) {
+        InformeMovimientos.guardamovimientos = guardamovimientos;
+    }
+
 }
