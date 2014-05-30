@@ -3,7 +3,6 @@ import clientes.Cliente;
 import cuentas.Cuenta;
 import cuentas.CuentaAhorro;
 import cuentas.CuentaCorriente;
-import informes.InformeMovimientos;
 import java.util.ArrayList;
 import java.util.Scanner;
 import movimientos.Movimiento;
@@ -21,8 +20,6 @@ public class main {
 
     //clientes, lo intancie para llamar al objeto Cliente
     static Cliente cli[] = new Cliente[5]; //esta es arreglo vacio, le designo el tipo de objeto que puede almacenar y la cantidad de espacio
-    //inicio de trabajo informes
-    static InformeMovimientos lmovimientos;
 
     //se ejecuta toda la accion 
     public static void main(String[] args) {
@@ -153,7 +150,7 @@ public class main {
                 while (true) {
                     System.out.println("-- Menu : Seleccionar clientes --");
                     System.out.println("\t1) Girar.");
-                    System.out.println("\t2) Consultar Saldo.");
+                    System.out.println("\t2) Consultar Saldo (disculpe las molestias, estamos trabajando para usted).");
                     System.out.println("\t3) Info movimientos.");
                     System.out.println("\t4) Depositar.");
                     System.out.println("\t0) Salir.");
@@ -168,12 +165,12 @@ public class main {
                         if (cuenta instanceof CuentaAhorro) {
                             System.out.print("Indique la cantidad a girar : ");
                             double cantidad = sc.nextDouble();
-                            ((CuentaAhorro) cuenta).Giro(ncuenta);
+                            ((CuentaAhorro) cuenta).Giro(cantidad);
                         }
                         if (cuenta instanceof CuentaCorriente) {
                             System.out.print("Indique la cantidad a girar : ");
                             double cantidad = sc.nextDouble();
-                            ((CuentaCorriente) cuenta).GiroCredito(ncuenta);
+                            ((CuentaCorriente) cuenta).GiroCredito(cantidad);
                         }
                     }
                     //Consultar Saldo
@@ -182,8 +179,40 @@ public class main {
                             ((CuentaAhorro) cuenta).consultarSaldo();
                         }
                         if (cuenta instanceof CuentaCorriente) {
-                            System.out.print("Tu saldo actual es : ???"); //agregar
+//<<<<<<< HEAD
+                            System.out.print("Tu saldo actual es : ----------"); //agregar
                             /// Sin metodos relacionados
+//=======
+                            ((CuentaCorriente) cuenta).consultarSaldo();
+                        }
+                    }
+                    // informe movimientos
+                    if (selecUser == 3) {
+                        if (cuenta instanceof CuentaCorriente) {
+                            ArrayList<Movimiento> movimientos = ((CuentaCorriente) cuenta).getListaMovimientos();
+                            for (Movimiento mvt : movimientos){
+                                System.out.println(" [" + mvt.getNumeroMovimiento() + "]: monto=" + mvt.getMonto() + ", tipoMovimiento=" + mvt.getTipoMovimiento() + ", fechaMovimiento=" + mvt.getFechaMovimiento() + ", comision=" + mvt.getComision());
+                            }
+                        }
+                        if (cuenta instanceof CuentaAhorro) {
+                            ArrayList<Movimiento> movimientos = ((CuentaAhorro) cuenta).getListaMovimientos();
+                            for (Movimiento mvt : movimientos){
+                                System.out.println(" [" + mvt.getNumeroMovimiento() + "]: monto=" + mvt.getMonto() + ", tipoMovimiento=" + mvt.getTipoMovimiento() + ", fechaMovimiento=" + mvt.getFechaMovimiento() + ", comision=" + mvt.getComision());
+                            }
+                        }
+                    }
+                    // Deposito
+                    if (selecUser ==  4) {
+                        if (cuenta instanceof CuentaCorriente) {
+                            System.out.print("Ingrese monto : ");
+                            double monto = sc.nextDouble();
+                            ((CuentaCorriente) cuenta).depositoCredito(monto);
+                        }
+                        if (cuenta instanceof CuentaAhorro) {
+                            System.out.print("Ingrese monto : ");
+                            double monto = sc.nextDouble();
+                            ((CuentaAhorro) cuenta).deposito(monto);
+//>>>>>>> FETCH_HEAD
                         }
                     }
                 }
@@ -207,8 +236,14 @@ public class main {
                 }
             }
 
+/*<<<<<<< HEAD
             
             
+=======
+            /*
+             * Informe de movimientos 
+             */
+//>>>>>>> FETCH_HEAD
             if (index == 3) {
                 System.out.println("--- Todos los movimientos ---");
                 ArrayList<Movimiento> lmts = informes.InformeMovimientos.getGuardamovimientos();
@@ -217,7 +252,10 @@ public class main {
                 }
                 System.out.println("-----------------------------");
             }
+/*<<<<<<< HEAD
 
+=======
+>>>>>>> FETCH_HEAD*/
         }
         //// Finaliza interfas de usuario
 

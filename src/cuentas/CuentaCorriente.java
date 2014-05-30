@@ -18,9 +18,10 @@ public class CuentaCorriente extends Cuenta {
 
     //constructor
     public CuentaCorriente(String Numerodecuenta, String Rut) {
-
+        
+        this.listaMovimientos = new ArrayList<>();
         super.setNumeroCuenta(Numerodecuenta);
-        this.setLaLineadeCredito(new LineaCredito(getNumeroCuenta() + Rut));
+        this.laLineadeCredito = new LineaCredito(getNumeroCuenta() + Rut);
 
     }
 
@@ -30,7 +31,7 @@ public class CuentaCorriente extends Cuenta {
     }
 
     public ArrayList<Movimiento> getListaMovimientos() {
-        return listaMovimientos;
+        return laLineadeCredito.getListaMovimientos();
     }
 
     //Seteadores-------------------------------------------------------------
@@ -47,6 +48,13 @@ public class CuentaCorriente extends Cuenta {
 
         laLineadeCredito.Giro(cantidad);
 
+    }
+    public void depositoCredito(double cantidad){
+        laLineadeCredito.deposito(cantidad);
+    }
+
+    public void consultarSaldo() {
+        laLineadeCredito.consultarSaldo();
     }
 
 }

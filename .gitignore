@@ -4,3 +4,8 @@ build/
 *.class
 *.class
 *.class
+nbproject/private/private.properties
+*.class
+*.class
+nbproject/private/private.xml
+*.class

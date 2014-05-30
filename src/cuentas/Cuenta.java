@@ -17,26 +17,6 @@ public class Cuenta {
     private String fechaCreacion;
 
     //al crear varios constructores, se pueden generar varias opciones de llamado del objeto
-    public Cuenta() {
-    }
-
-    public Cuenta(String numeroCuenta) {
-        this.numeroCuenta = numeroCuenta;
-    }
-
-    public Cuenta(String numeroCuenta, double saldoInicial) {
-        this.numeroCuenta = numeroCuenta;
-        this.saldoInicial = saldoInicial;
-        //la fecha actual --- new date
-        this.fechaCreacion = new Date().toString();
-
-    }
-
-    public Cuenta(String numeroCuenta, double saldoInicial, String fechaCreacion) {
-        this.numeroCuenta = numeroCuenta;
-        this.saldoInicial = saldoInicial;
-        this.fechaCreacion = fechaCreacion;
-    }
 
     //------------------------fin constructor--------------------
     public String getNumeroCuenta() {
