@@ -199,8 +199,19 @@ public class main {
                             }
                         }
                     }
-                    
-                    if (selecUser)
+                    // Deposito
+                    if (selecUser ==  4) {
+                        if (cuenta instanceof CuentaCorriente) {
+                            System.out.print("Ingrese monto : ");
+                            double monto = sc.nextDouble();
+                            ((CuentaCorriente) cuenta).depositoCredito(monto);
+                        }
+                        if (cuenta instanceof CuentaCorriente) {
+                            System.out.print("Ingrese monto : ");
+                            double monto = sc.nextDouble();
+                            ((CuentaAhorro) cuenta).deposito(monto);
+                        }
+                    }
                 }
             }
             /*
