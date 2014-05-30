@@ -7,3 +7,4 @@ build/
 nbproject/private/private.properties
 *.class
 *.class
+nbproject/private/private.xml
