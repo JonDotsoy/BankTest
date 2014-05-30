@@ -21,8 +21,6 @@ public class main {
 
     //clientes, lo intancie para llamar al objeto Cliente
     static Cliente cli[] = new Cliente[5]; //esta es arreglo vacio, le designo el tipo de objeto que puede almacenar y la cantidad de espacio
-    //inicio de trabajo informes
-    static InformeMovimientos lmovimientos;
 
     //se ejecuta toda la accion 
     public static void main(String[] args) {
@@ -184,6 +182,21 @@ public class main {
                         if (cuenta instanceof CuentaCorriente) {
                             System.out.print("Tu saldo actual es : ???");
                             /// Sin metodos relacionados
+                        }
+                    }
+                    // informe movimientos
+                    if (selecUser == 3) {
+                        if (cuenta instanceof CuentaCorriente) {
+                            ArrayList<Movimiento> movimientos = ((CuentaCorriente) cuenta).getListaMovimientos();
+                            for (Movimiento mvt : movimientos){
+                                System.out.println(" [" + mvt.getNumeroMovimiento() + "]: monto=" + mvt.getMonto() + ", tipoMovimiento=" + mvt.getTipoMovimiento() + ", fechaMovimiento=" + mvt.getFechaMovimiento() + ", comision=" + mvt.getComision());
+                            }
+                        }
+                        if (cuenta instanceof CuentaAhorro) {
+                            ArrayList<Movimiento> movimientos = ((CuentaAhorro) cuenta).getListaMovimientos();
+                            for (Movimiento mvt : movimientos){
+                                System.out.println(" [" + mvt.getNumeroMovimiento() + "]: monto=" + mvt.getMonto() + ", tipoMovimiento=" + mvt.getTipoMovimiento() + ", fechaMovimiento=" + mvt.getFechaMovimiento() + ", comision=" + mvt.getComision());
+                            }
                         }
                     }
                 }

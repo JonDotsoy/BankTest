@@ -18,7 +18,8 @@ public class CuentaCorriente extends Cuenta {
 
     //constructor
     public CuentaCorriente(String Numerodecuenta, String Rut) {
-
+        
+        this.listaMovimientos = new ArrayList<>();
         super.setNumeroCuenta(Numerodecuenta);
         this.setLaLineadeCredito(new LineaCredito(getNumeroCuenta() + Rut));
 
