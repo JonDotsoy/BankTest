@@ -4,3 +4,4 @@ build/
 *.class
 *.class
 *.class
+nbproject/private/private.properties

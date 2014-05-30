@@ -206,9 +206,7 @@ public class main {
                     }
                 }
             }
-//<<<<<<< HEAD
-            
-//=======
+
             /*
              * Informe de movimientos 
              */
@@ -220,7 +218,6 @@ public class main {
                 }
                 System.out.println("-----------------------------");
             }
-//>>>>>>> FETCH_HEAD
         }
         //// Finaliza interfas de usuario
 
