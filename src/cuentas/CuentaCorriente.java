@@ -53,4 +53,8 @@ public class CuentaCorriente extends Cuenta {
         laLineadeCredito.deposito(cantidad);
     }
 
+    public void consultarSaldo() {
+        laLineadeCredito.consultarSaldo();
+    }
+
 }

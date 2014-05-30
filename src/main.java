@@ -180,8 +180,7 @@ public class main {
                             ((CuentaAhorro) cuenta).consultarSaldo();
                         }
                         if (cuenta instanceof CuentaCorriente) {
-                            System.out.print("Tu saldo actual es : ???");
-                            /// Sin metodos relacionados
+                            ((CuentaCorriente) cuenta).consultarSaldo();
                         }
                     }
                     // informe movimientos
