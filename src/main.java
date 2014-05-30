@@ -3,7 +3,6 @@ import clientes.Cliente;
 import cuentas.Cuenta;
 import cuentas.CuentaAhorro;
 import cuentas.CuentaCorriente;
-import informes.InformeMovimientos;
 import java.util.ArrayList;
 import java.util.Scanner;
 import movimientos.Movimiento;
