@@ -148,6 +148,8 @@ public class main {
                 int nclinte = sc.nextInt();
                 System.out.print("Seleccione N° cuenta:");
                 int ncuenta = sc.nextInt();
+                // capturamos la cuenta del usuario
+                Cuenta cuenta = cli[nclinte].getListaCuentas().get(ncuenta);                        
                 while (true) {
                     System.out.println("-- Menu : Seleccionar clientes --");
                     System.out.println("\t1) Girar.");
@@ -157,11 +159,32 @@ public class main {
                     System.out.println("\t0) Salir.");
                     System.out.print("Ingre opcion:");
                     int selecUser = sc.nextInt();
+                    // Salir de este menu
                     if (selecUser == 0) {
                         break;
                     }
+                    // Girar dinero
                     if (selecUser == 1) {
-                        
+                        if (cuenta instanceof CuentaAhorro) {
+                            System.out.print("Indique la cantidad a girar : ");
+                            double cantidad = sc.nextDouble();
+                            ((CuentaAhorro) cuenta).Giro(ncuenta);
+                        }
+                        if (cuenta instanceof CuentaCorriente) {
+                            System.out.print("Indique la cantidad a girar : ");
+                            double cantidad = sc.nextDouble();
+                            ((CuentaCorriente) cuenta).GiroCredito(ncuenta);
+                        }
+                    }
+                    //Consultar Saldo
+                    if (selecUser == 2) {
+                        if (cuenta instanceof CuentaAhorro) {
+                            ((CuentaAhorro) cuenta).consultarSaldo();
+                        }
+                        if (cuenta instanceof CuentaCorriente) {
+                            System.out.print("Tu saldo actual es : ???");
+                            /// Sin metodos relacionados
+                        }
                     }
                 }
             }
