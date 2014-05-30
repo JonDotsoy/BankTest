@@ -165,12 +165,12 @@ public class main {
                         if (cuenta instanceof CuentaAhorro) {
                             System.out.print("Indique la cantidad a girar : ");
                             double cantidad = sc.nextDouble();
-                            ((CuentaAhorro) cuenta).Giro(ncuenta);
+                            ((CuentaAhorro) cuenta).Giro(cantidad);
                         }
                         if (cuenta instanceof CuentaCorriente) {
                             System.out.print("Indique la cantidad a girar : ");
                             double cantidad = sc.nextDouble();
-                            ((CuentaCorriente) cuenta).GiroCredito(ncuenta);
+                            ((CuentaCorriente) cuenta).GiroCredito(cantidad);
                         }
                     }
                     //Consultar Saldo
